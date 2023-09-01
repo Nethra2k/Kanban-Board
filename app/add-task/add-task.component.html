@@ -1,0 +1,47 @@
+<body style="margin:0;">
+    <!-- <div class="box">
+        <div class="form"> -->
+
+    <h2>New Task</h2>
+    <div>
+        <form #form="ngForm">
+            <div class="mb-3">
+                <label for="taskName" class="form-label">Task Name</label>
+                <input type="text" class="form-control" id="taskName" [(ngModel)]="taskName" name="tName" #name="ngModel" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label><br>
+                <textarea id="description" name="desc" rows="10" cols="50" style="height:80px;border-radius:10px;" [(ngModel)]="description" #desc="ngModel" required>
+                </textarea>
+            </div>
+<!-- ------------------------------------------------------------------------------- -->
+
+<mat-form-field style="width: 100%;">
+    <mat-label>Assign to</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let item of projectMembers" value="item" (click)="saveAssignee(item)">{{item}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+<!-- ------------------------------------------------------------------------------- -->
+
+
+            <div class="mb-3">
+                <label for="deadLine" class="form-label">Deadline</label>
+                <input type="date" class="form-control" id="deadLine" [(ngModel)]="deadLine" name="lastDate" #deadDate="ngModel" required>
+            </div>
+
+<!-- ------------------------------------------------------------------------ -->
+              
+
+            <mat-radio-group aria-label="Select an option" [(ngModel)]="priority" name="pr" #prior="ngModel" required>
+                <mat-radio-button value="1" style="margin-right:10px;">Low</mat-radio-button>
+                <mat-radio-button value="2" style="margin-right:10px;">Medium</mat-radio-button>
+                <mat-radio-button value="3">High</mat-radio-button>
+            </mat-radio-group>
+            <br>
+            <button type="submit" class="btn btn-primary" (click)="saveTask()" style="margin-top:20px;" [disabled]="form.invalid">Save</button>
+        </form>
+    </div>
+<!-- </div>
+</div> -->
+</body>

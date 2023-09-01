@@ -1,0 +1,14 @@
+
+<body style="overflow-y: auto;max-height:600px;">
+    <h2>Update column</h2>
+    <h1 style="text-align: center;">{{columnData.columnName}}</h1>
+      <form #form1="ngForm">
+        <div class="mb-3">
+          <label for="limit" class="form-label">Set Limit</label>
+          <input type="number" class="form-control" id="limit" [(ngModel)]="columnData.taskLimit" name="pName" required
+            #tl="ngModel">
+        </div>
+        </form>
+        <button mat-raised-button color="primary" style="margin-right:8px;" (click)="updateTaskLimit()">Save</button>
+        <button mat-raised-button color="accent" (click)="deleteColumn()">Delete column</button>
+  </body>

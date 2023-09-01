@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div class="firstDiv">
+    
+    <div class="main">
+        <h1 style="color: white;font-weight: bolder;font-size:40px;">Login</h1>
+        <!-- <button id="googleLogin">
+            <span>
+        <i class="fab fa-google fa-1x" style="margin-right: 2px;"></i>
+        <span style="color: #00aaff;">Log in with Google </span>
+    </span>
+        </button> -->
+
+        <form  [formGroup]="loginForm">
+            <mat-form-field class="inputBox" >
+                <mat-label class="formField"><i class="fa-solid fa-envelope" style="margin-right:10px;"></i>Email</mat-label>
+                <input matInput class="input"  formControlName="email">
+            </mat-form-field>
+                <div *ngIf="!email?.valid && (email?.dirty ||email?.touched)" style="width: fit-content;">
+                    <div class="error" [hidden]="!email.errors?.['required']">
+                        Email is required
+                    </div>
+                    <div class="error" [hidden]="!email.errors?.['pattern'] && !email.errors?.['email']">
+                        Enter valid email address
+                    </div>
+                </div>
+
+            <br>
+            <mat-form-field class="inputBox">
+                <mat-label class="formField"><i class="fa-solid fa-key"  style="margin-right:10px; "></i>Password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" class="input "  formControlName="password"  name="password" pattern="(?=.*[*&$@!.])(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon style="color: white;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+                <div *ngIf="!password?.valid && (password?.dirty ||password?.touched)" style="width: fit-content;">
+                    <div class="error"  [hidden]="!password.errors?.['required']">
+                        *Password is required
+                    </div>
+                    <div class="error"  [hidden]="!password.errors?.['pattern']">
+                        *Password length minimum 8 letter,with atleast a symbol,upper case,lower case
+                    </div>
+                </div>
+
+              <br>
+              <button id="button" (click)="onLogin()" [disabled]="loginForm.invalid">Log in</button>
+            </form>
+           <a style="cursor:pointer;" routerLink="/register"  id="anchor">Create new account</a>
+           <a style="cursor:pointer;" routerLink="/forgotPassword" id="anchor">Forgot password</a>
+    </div>
+</div>
+<app-footer></app-footer>

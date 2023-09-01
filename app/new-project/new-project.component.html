@@ -1,0 +1,52 @@
+<body style="overflow-y: auto;max-height:600px;">
+  <h2>New Project</h2>
+  <div>
+    <form #form1="ngForm">
+      <div class="mb-3">
+        <label for="projectName" class="form-label">Project Name</label>
+        <input type="text" class="form-control" id="projectName" [(ngModel)]="projName" name="pName" required
+          #prName="ngModel">
+      </div>
+      <div class="mb-3">
+        <label for="projectDesc" class="form-label">Description</label><br>
+        <textarea id="projectDesc" name="w3review" rows="10" cols="50" style="height:150px;border-radius:10px;"
+          name="desc" [(ngModel)]="projDesc" required #d="ngModel">
+                </textarea>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+
+        <mat-radio-group color=warn aria-label="Select an option" [(ngModel)]="projectType" name="prTy" #r="ngModel"
+          required>
+          <mat-radio-button value="1" style="margin-right: 20px;"> Self</mat-radio-button>
+          <mat-radio-button value="2">Team</mat-radio-button>
+        </mat-radio-group>
+
+        <div *ngIf="projectType==2">
+          <table class="table">
+            <tbody>
+              <tr *ngFor="let member of membersList">
+                <td>{{member}}</td>
+                <mat-icon (click)="removeMember(member)">clear</mat-icon>
+              </tr>
+            </tbody>
+          </table>
+          <form class="example-form" style="display: inline-block;" #form="ngForm" id="myform">
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Email" value="email@gmail.com" [(ngModel)]="memberId" name="member" required
+                #member="ngModel">
+            </mat-form-field>
+          </form>
+          <button mat-raised-button color="warn" (click)="addMember()" [disabled]="member?.invalid">Add</button>
+          <!-- <form >
+                <input type="text" [(ngModel)]="memberId" name="member">
+                <button mat-raised-button color="warn" (click)="addMember()">Add</button> -->
+          <!-- <button (click)="addMember()" >Add</button> -->
+          <!-- </form> -->
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="save()" [disabled]="form1.invalid">Create</button>
+    </form>
+  </div>
+</body>

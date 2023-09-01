@@ -1,0 +1,31 @@
+<body>
+  <h2 style="text-align: center;padding-top: 50px;margin-bottom: 20px;text-decoration: underline;">{{service.getCurrentProjectOpened().projectName}}</h2>
+    <div style="width: 90%;margin: auto;">
+      <p style="display: inline-block;font-weight: 600;">Overdues</p>
+      <button mat-raised-button color="warn" routerLink="/body/project/{{service.currentProjectId1}}" style="float: right;margin-bottom: 20px;">Go to project</button>
+      <table class="table">
+        <thead>
+          <tr class="table-info">
+            <!-- <th scope="col">#</th> -->
+            <th scope="col">Task</th>
+            <th scope="col">Deadline</th>
+            <th scope="col">Status</th>
+            <th scope="col">Assignee</th>
+            <th scope="col">Priority</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-warning" *ngFor="let task of getTaskToShow()">
+            <!-- <th scope="row">{{getSerial()}}</th> -->
+            <td matTooltip="{{task.description}}">{{task.taskName}}</td>
+            <td matTooltip="{{task.description}}">{{task.deadLine}}</td>
+            <td matTooltip="{{task.description}}">{{task.taskStatus}}</td>
+            <td matTooltip="{{task.description}}">{{task.assignee}}</td>
+            <td matTooltip="{{task.description}}">{{getPriority(task.priority)}}</td>
+            <td><button mat-stroked-button color="warn" (click)="doneTask(task)">Completed</button>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  </body>

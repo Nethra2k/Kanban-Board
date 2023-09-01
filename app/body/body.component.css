@@ -1,0 +1,312 @@
+mat-sidenav-container.mat-sidenav.mat-nav-list.a{
+    color: white;
+}
+
+mat-sidenav{
+  width:20%;
+  padding-left: 10px;
+}
+
+mat-toolbar{
+  height:80px;
+}
+
+.navIcon{
+    font-size: 30px;
+    /* margin-left:60px; */
+    color: white;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .sContainer{
+    /* background-image: url(src\assets\hourglass_stones_blur_120797_1920x1020.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* transition: 5s; */
+    /* animation-name: animate; */
+    /* animation-direction: alternate-reverse; */
+    /* animation-duration:3000s; */
+    /* animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running; */
+    /* animation-timing-function:ease-in-out; */
+    /* animation: change 60s infinite ease-in-out; */
+
+  }
+
+  .dropdown{
+    margin-right:50px;
+    margin-top:8px;
+  }
+
+  /* @keyframes change{
+    0%{
+      background-image: url(src/assets/Image20230118133056.jpg);
+    }
+    20%{
+      background-image: url(src\assets\Image20230111112356.jpg);
+    }
+    40%{
+      background-image: url(src/assets/Image20230118133056.jpg);
+    }
+    60%{
+      background-image: url(src\assets\Image20230111112356.jpg);
+    }
+    80%{
+      background-image: url(src/assets/Image20230118133056.jpg);
+    }
+    100%{
+      background-image: url(src\assets\Image20230111112356.jpg);
+    } */
+  /* } */
+
+  mat-toolbar .logo{
+    font-size: xx-large;
+    /* font-family: cursive; */
+    margin-top: 10px;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    margin-left: 10px;
+    /* text-align: center; */
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0008);
+    line-height: 0.70em;
+    outline: none;
+    animation: css 3s linear infinite;
+}
+
+.imageLogo{
+  height:40px;
+  width:40px;
+  margin-left:20px;
+}
+
+@keyframes css {
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        color: #0e3742;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90.1%,92.1%,100%
+    {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4;
+    }
+}
+
+mat-toolbar-row{
+  height: 60px;
+}
+
+.avatar{
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  width: fit-content;
+  padding:5px;
+}
+
+.dashboard:hover{
+  background-color:rgba(128,128,128,0.4);
+  /* background-color:red; */
+  border-radius:10px;
+}
+
+.project:hover{
+  background-color:green;
+  /* color: green; */
+  border-radius:10px;
+}
+
+/* .dashboard{
+  background-color: #0e3742;
+} */
+
+::placeholder{
+  color: white;
+  font-size: 20px;
+}
+
+.tools{
+  margin-left:70%;
+  display: flex;
+}
+
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 10px;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+
+@media(max-width:768px){
+
+
+mat-sidenav-container.mat-sidenav.mat-nav-list.a{
+  color: white;
+}
+
+mat-sidenav{
+  width:50%;
+  padding-left: 0px;
+}
+
+.navIcon{
+  font-size: 30px;
+  /* margin-left:60px; */
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+mat-toolbar{background-color:black;
+  height:50px;
+}
+
+.dropdown{
+  margin-right:20px;
+  margin-top:8px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.sContainer{
+  background-image: url(src\assets\hourglass_stones_blur_120797_1920x1020.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+mat-toolbar .logo{
+  font-size:large;
+  font-family: cursive;
+  margin-top: 5px;
+  color: #0e3742;
+  text-transform: uppercase;
+  width: 100%;
+  margin-left: 10px;
+  /* text-align: center; */
+  -webkit-box-reflect: below 1px linear-gradient(transparent,#0008);
+  line-height: 0.70em;
+  outline: none;
+  animation: css 3s linear infinite;
+}
+
+.imageLogo{
+  height:30px;
+  width:30px;
+  margin-left:10px;
+}
+
+@keyframes css {
+  0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+  {
+      color: #0e3742;
+      text-shadow: none;
+  }
+  18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90.1%,92.1%,100%
+  {
+      color: #fff;
+      text-shadow: 0 0 10px #03bcf4,
+      0 0 20px #03bcf4,
+      0 0 40px #03bcf4,
+      0 0 80px #03bcf4,
+      0 0 160px #03bcf4;
+  }
+}
+
+mat-toolbar-row{
+height: 60px;
+}
+
+.avatar{
+color: black;
+background-color: white;
+border-radius: 50%;
+width: fit-content;
+padding:5px;
+}
+
+.dashboard:hover{
+background-color:rgba(128,128,128,0.4);
+/* background-color:red; */
+border-radius:10px;
+}
+
+.project:hover{
+/* background-color:green; */
+/* color: green; */
+border-radius:10px;
+}
+
+/* .dashboard{
+background-color: #0e3742;
+} */
+
+::placeholder{
+color: white;
+font-size: 20px;
+}
+
+.tools{
+  margin-left:40%;
+  display: flex;
+}
+}
