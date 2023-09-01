@@ -1,0 +1,9 @@
+com\kanban\userAuthService\service\UserAuthServiceImpl.class
+com\kanban\userAuthService\service\TokenGenerator.class
+com\kanban\userAuthService\config\MessageConfiguration.class
+com\kanban\userAuthService\UserAuthServiceApplication.class
+com\kanban\userAuthService\controller\UserController.class
+com\kanban\userAuthService\domain\KanbanUser.class
+com\kanban\userAuthService\service\TokenServiceImpl.class
+com\kanban\userAuthService\repository\UserRepository.class
+com\kanban\userAuthService\service\UserAuthService.class

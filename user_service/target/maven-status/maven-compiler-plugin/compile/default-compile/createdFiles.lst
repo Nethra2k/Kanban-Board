@@ -1,0 +1,12 @@
+com\kanban\domain\User.class
+com\kanban\dto\UserCredential.class
+com\kanban\proxy\UserCredentialProxy.class
+com\kanban\filter2\TokenFilterByBody.class
+com\kanban\exception\UserAlreadyExistException.class
+com\kanban\repository\UserRepository.class
+com\kanban\UserServiceApplication.class
+com\kanban\service\UserService.class
+com\kanban\service\UserServiceImpl.class
+com\spotify\userservice\filter\JwtFilter.class
+com\kanban\domain\UserWithPassword.class
+com\kanban\controller\UserController.class
